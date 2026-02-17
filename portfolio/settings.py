@@ -20,13 +20,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9x&2iwanl(=&80te+-iuuo35bd(bq+h@rs5a2#89#0h#d7(&=t'
+import os
+import dj_database_url
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DEBUG = os.environ.get('DEBUG') == 'True'
 
-ALLOWED_HOSTS = ['*']
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
+}
 
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 
 # Application definition
 
@@ -74,12 +80,14 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
 }
+
 
 
 # Password validation
@@ -126,3 +134,5 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Serve static files efficiently
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
