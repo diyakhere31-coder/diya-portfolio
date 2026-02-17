@@ -1,0 +1,328 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+                <p class="hero-intro">
+                    FULL STACK DEVELOPER
+                </p>
+                <h1 class="hero-title">
+                    Hi, I'm <span>Diya Khere</span>
+                </h1>
+
+                <p class="hero-subtext">
+                    I build scalable web applications using Django, REST APIs, and modern frontend technologies. 
+                    Focused on performance, clean architecture, and real-world impact.
+                </p>
+                <div class="hero-buttons mt-4">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn-primary-custom me-2">
+                        <i class="fab fa-linkedin"></i> LINKEDIN
+                    </a>
+                    <a href="{% static 'Diya_ATS_Resume.pdf' %}" download class="btn-outline-custom">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="500">
+                <div class="coding-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="window-body">
+                        <pre><code id="typewriter"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section about-section" id="about" data-aos="fade-up">
+    <div class="container">
+        <div class="row align-items-center"> 
+            <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                <div class="about-profile-card">
+                    <img src="{% static 'profile.jpeg' %}" alt="Diya Khere" class="about-img mb-4">
+                    <div class="profile-details text-start">
+                        <p><strong>Name:</strong> Diya Khere</p>
+                        <p><strong>Job Role:</strong> Full Stack Developer</p>
+                        <p><strong>Experience:</strong> Fresher / Intern</p>
+                        <p><strong>Address:</strong> Nagpur</p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <p class="mb-1">Python & Django</p>
+                        <div class="progress-custom"><div class="progress-fill" style="width: 90%;"></div></div>
+                        
+                        <p class="mb-1 mt-3">REST APIs</p>
+                        <div class="progress-custom"><div class="progress-fill" style="width: 85%;"></div></div>
+                        
+                        <p class="mb-1 mt-3">Frontend (HTML/CSS/JS)</p>
+                        <div class="progress-custom"><div class="progress-fill" style="width: 80%;"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 ps-lg-5" data-aos="fade-left">
+                <h2 class="about-title mb-4">About Me</h2>
+                <p class="about-text">
+                    I'm an aspiring <strong>Full Stack Developer</strong> with a strong foundation in Python and Django. 
+                    I'm passionate about building robust backend systems, working with databases like PostgreSQL, 
+                    and creating seamless user experiences with modern frontend technologies.
+                </p>
+                <p class="about-text">
+                    I enjoy solving real-world problems through clean, efficient code and am continuously 
+                    expanding my skills to grow as a developer. My focus is on creating scalable applications 
+                    that have a meaningful impact.
+                </p>
+
+                <div class="row mt-4">
+                    <div class="col-6 col-md-4 mb-3">
+                        <h6 class="fw-bold text-light">Profile:</h6>
+                        <p class="text-secondary">Full Stack Developer</p>
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <h6 class="fw-bold text-light">Education:</h6>
+                        <p class="text-secondary">Master of Computer Application</p>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <h6 class="fw-bold text-light">Interest:</h6>
+                        <p class="text-secondary">Web Development & AI</p>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <a href="https://linkedin.com/in/diya-khere-065680391" class="btn-primary-custom py-2 px-4">LINKEDIN</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section skills-section" id="skills" data-aos="fade-up">
+    <div class="container text-center">
+
+        <h2 class="fw-bold mb-5 skills-title">Technical Expertise</h2>
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- FRONTEND -->
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h5>Frontend Development</h5>
+                    <div class="skill-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Bootstrap</span>
+                        <span>JavaScript</span>
+                        <span>Angular</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BACKEND -->
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h5>Backend Development</h5>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>Django ORM</span>
+                        <span>REST APIs</span>
+                        <span>AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DATABASE -->
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h5>Database & Tools</h5>
+                    <div class="skill-tags">
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                        <span>Git</span>
+                        <span>Postman</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="section education-section" id="education" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold education-title">Education</h2>
+        
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-md-5" data-aos="fade-right">
+                <div class="education-card">
+                    <div class="edu-year">2024 - 2026</div>
+                    <h4 class="edu-degree">Master of Computer Application (MCA)</h4>
+                    <p class="edu-college text-info">Shri Shivaji Science, College</p>
+                    <p class="edu-location text-secondary"><i class="fas fa-map-marker-alt me-2"></i>Nagpur, Maharashtra</p>
+                    <hr class="edu-divider">
+                    <p class="edu-grade">Grade: <span class="text-light">First Class Distinction</span></p>
+                </div>
+            </div>
+            <div class="col-md-5" data-aos="fade-left">
+                <div class="education-card">
+                    <div class="edu-year">2021 - 2024</div>
+                    <h4 class="edu-degree">Bachelor of Science (Computer Science)</h4>
+                    <p class="edu-college text-info">Seth Kesarimal Porwal, College</p>
+                    <p class="edu-location text-secondary"><i class="fas fa-map-marker-alt me-2"></i>Kamptee, Maharashtra</p>
+                    <hr class="edu-divider">
+                    <p class="edu-grade">Grade: <span class="text-light">First Class Distinction</span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- PROJECTS SECTION -->
+<section class="section projects-section" id="projects" data-aos="fade-up">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold project-headline">Projects</h2>
+            <div class="heading-line"></div> <p class="text-secondary mt-3">Hands-on experience building real-world applications</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+            {% for project in projects %}
+            <div class="col {% if projects|length == 1 %}col-lg-8{% endif %}" data-aos="zoom-in">
+                <div class="project-card-new">
+                    <div class="project-img-wrapper">
+                        {% if project.image %}
+                            <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-img">
+                        {% else %}
+                            <img src="{% static 'home.png' %}" alt="Project" class="project-img">
+                        {% endif %}
+                        
+                        <div class="project-overlay">
+                            <div class="overlay-links">
+                                {% if project.github_link %}
+                                <a href="{{ project.github_link }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                {% endif %}
+                                {% if project.live_link %}
+                                <a href="{{ project.live_link }}" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info-content">
+                        <h4 class="fw-bold text-light mb-3">{{ project.title }}</h4>
+                        
+                        <p class="project-text">
+                            <strong class="text-info">Solution:</strong> {{ project.solution|truncatechars:150 }}
+                        </p>
+                        
+                        <div class="tech-stack-container mt-3">
+                            {% for tech in project.tech_stack.split %}
+                                <span class="badge tech-badge">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="highlights-section py-5" data-aos="fade-up">
+    <div class="container text-center">
+        
+        <div class="coming-soon-wrapper mb-5 py-4">
+            <h2 class="text-white fw-bold mb-2">New Projects Coming Soon</h2>
+            <div class="heading-line mx-auto mb-3"></div>
+            
+            <p class="coming-soon-thought text-secondary mb-4">
+                "Code is like humor. When you have to explain it, it’s bad. <br>
+                Building something clean, efficient, and impactful right now."
+            </p>
+
+            <a href="https://github.com/diyakhere31-coder" target="_blank" class="btn-github-large">
+                <i class="fab fa-github me-2"></i> GitHub
+            </a>
+        </div>
+
+        <hr class="section-divider mx-auto mb-5">
+
+        <div class="leetcode-stats-wrapper">
+            <div class="stat-card-mini mx-auto">
+                <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+                    <div class="leetcode-info me-md-4 mb-3 mb-md-0">
+                        <h3 class="fw-bold text-primary-blue mb-0">100+</h3>
+                        <p class="text-secondary small uppercase mb-0">LeetCode Problems Solved</p>
+                    </div>
+                    <a href="https://leetcode.com/Diya_Khere_88/" target="_blank" class="btn-leetcode">
+                        <i class="fas fa-terminal me-2"></i> LeetCode
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="section contact-section" id="contact" data-aos="fade-up">
+    <div class="container text-center">
+        <h2 class="fw-bold text-white mb-2">Contact Me</h2>
+        <div class="heading-line mb-4"></div>
+        <p class="text-secondary mb-5">Below are the details to reach out to me!</p>
+
+        <div class="row mb-5 justify-content-center">
+            <div class="col-6 col-md-3" data-aos="flip-up">
+                <a href="https://www.google.com/maps?q=Nagpur,India" target="_blank" class="text-decoration-none">
+                    <div class="contact-icon-box">
+                        <div class="icon-circle-blue"><i class="fas fa-map-marker-alt"></i></div>
+                        <h6>ADDRESS</h6>
+                        <p>Nagpur, India</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="tel:+919322845735" class="text-decoration-none">
+                    <div class="contact-icon-box">
+                        <div class="icon-circle-blue"><i class="fas fa-phone-alt"></i></div>
+                        <h6>CONTACT NUMBER</h6>
+                        <p>+91 91583 XXX XX</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mt-4 mt-md-0">
+                <a href="mailto:diyakhere2@gmail.com" class="text-decoration-none">
+                    <div class="contact-icon-box">
+                        <div class="icon-circle-blue"><i class="fas fa-envelope"></i></div>
+                        <h6>EMAIL ADDRESS</h6>
+                        <p>contact@domainname.com</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mt-4 mt-md-0">
+                <a href="{% static 'Diya_ATS_Resume.pdf' %}" target="_blank" class="text-decoration-none">
+                    <div class="contact-icon-box">
+                        <div class="icon-circle-blue"><i class="fas fa-file-download"></i></div>
+                        <h6>DOWNLOAD RESUME</h6>
+                        <p>Resume Link</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
